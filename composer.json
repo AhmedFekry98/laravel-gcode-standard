@@ -1,0 +1,23 @@
+{
+    "name": "graphicode/standard",
+    "description": "the standard utlities for graphicode laravel team",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Graphicode\\Standard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "abdulrhman-developer0",
+            "email": "tknwtknwlwjy10@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.1",
+        "laravel/framework": "^10.10"
+
+    }
+}
