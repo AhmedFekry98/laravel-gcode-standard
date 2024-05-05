@@ -8,12 +8,7 @@
             "Graphicode\\Standard\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "abdulrhman-developer0",
-            "email": "tknwtknwlwjy10@gmail.com"
-        }
-    ],
+    "authors": [],
     "minimum-stability": "stable",
     "require": {
         "php": ">=8.1",

@@ -9,7 +9,7 @@
 ### installation
 
 Use this command to try the package now.
-```
+```sh
     composer require graphicode/standard
 ```
 ___
