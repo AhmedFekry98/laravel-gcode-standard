@@ -111,16 +111,12 @@ trait ApiResponses
      */
     public function resolveData(mixed $data): array
     {
-        if (!$data) {
-            return [];
-        }
-
         if (is_array($data)) {
-            return $data;
+            return ['data' => $data];
         }
 
         if (is_object($data) && method_exists($data, 'toArray')) {
-            return $data->toArray(request());
+            return ['data' => $data->toArray(request())];
         }
 
         return ['data' => $data];
