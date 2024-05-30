@@ -37,7 +37,7 @@ publish lang files:
 ###ApiResponse Trait
 this trait used to make cleen api responses.
 
-<div id id="apiResponses"></div>
+<div id="apiResponses"></div>
 
 
 preparing your controller to use the trait:
