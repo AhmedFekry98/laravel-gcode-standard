@@ -34,7 +34,7 @@ publish lang files:
 ---
 <br>
 
-###ApiResponse Trait
+### ApiResponse Trait
 this trait used to make cleen api responses.
 
 <div id="apiResponses"></div>
