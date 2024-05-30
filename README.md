@@ -16,8 +16,8 @@
 <br>
 
 
-<div id="installation"></div>
 ### installation
+<span id="installation"></span>
 
 Use this command to try the package now:
 ```
@@ -35,8 +35,8 @@ publish lang files:
 <br>
 
 
-<div id="apiResponses"></div>
 ### ApiResponse Trait
+<span id="apiResponses"></span>
 this trait used to make cleen api responses.
 
 
