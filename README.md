@@ -16,8 +16,8 @@
 <br>
 
 
-### installation
 <div id="installation"></div>
+### installation
 
 Use this command to try the package now:
 ```
@@ -34,15 +34,15 @@ publish lang files:
 ---
 <br>
 
-### ApiResponse Trait
-this trait used to make cleen api responses.
 
 <div id="apiResponses"></div>
+### ApiResponse Trait
+this trait used to make cleen api responses.
 
 
 preparing your controller to use the trait:
 ```php
-    <?php
+<?php
 
 namespace App\Http\Controllers;
 
