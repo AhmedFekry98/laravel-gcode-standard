@@ -6,24 +6,29 @@ use App\Exceptions\TDOValidationException;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
-class TDO 
+class TDO
 {
     /**
      * Initialize new TDO instance.
      */
     // public function __construct(
-        protected $data;
+    protected $data;
     // ) {
     // }
-    
+
     public function make($request)
     {
+        // Check if the request is an object and has the 'validated' method
+        if (is_object($request) && method_exists($request, 'validated')) {
+            $this->data = $request->validated();
+        } else {
+            $this->data = $request; // Assume it's already an array or object
+        }
 
-        $this->data = $request->validated();
         return $this;
     }
 
-    
+
     /**
      * Access data values as proparty.
      */
