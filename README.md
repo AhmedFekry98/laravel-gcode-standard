@@ -1,15 +1,97 @@
 # Welcome in Graphicode Standard Package
+- <a href="#installation">Installation Stepts</a>
+- <a href="#apiResponses">ApiResponses Trait</a>
 
+<br>
+---
+<br>
 
 ### requirements
 
 - php >=8.0
 - laravel framework >=10.10 
 
-### installation
+<br>
+----
+<br>
 
-Use this command to try the package now.
-```sh
-    composer require graphicode/standard
+
+### installation
+<span id="installation"></span>
+
+Use this command to try the package now:
 ```
-___
+    composer require graphicode/standard v3.0
+```
+<br>
+
+publish lang files:
+```
+    php artisan vendor:publish --tag="gcstandard-lang"
+```
+
+<br>
+---
+<br>
+
+
+### ApiResponse Trait
+<span id="apiResponses"></span>
+this trait used to make cleen api responses.
+
+
+preparing your controller to use the trait:
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Graphicode\Standard\Traits\ApiResponses;
+
+class TestController extends Controller
+{
+    use ApiResponses;
+
+    public function index()
+    {
+        return $this->okResponse(data: [], message: "hello, api");
+    }
+}
+```
+
+<br><br>
+
+Available methods:
+```php
+    /**
+    * 200 Ok response
+    *
+    * @param $data
+    * @param $message
+    **/
+    return $this->okResponse(data: "data", message: "message");
+
+    /**
+    * 201 resource created
+    *
+    * @param $data
+    * @param $message
+    **/
+    return $this->createdResponse(data: "data", message: "message");
+
+    /**
+    * 400 bad response
+    *
+    * @param $data
+    * @param $message
+    **/
+    return $this->badResponse(data: "data", message: "message");
+
+    /**
+    * 201 unauthorized
+    *
+    * @param $data
+    * @param $message
+    **/
+    return $this->unauthenticatedResponse(data: "data", message: "message");
+```
